@@ -42,6 +42,7 @@ func main() {
 				sendPagerDutyAlert()
 				replyMessage := tgbotapi.NewMessage(update.Message.Chat.ID, "PagerDuty alert triggered.")
 				bot.Send(replyMessage)
+				log.Println("PagerDuty alert triggered.")
 			}
 		}
 	}
